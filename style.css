@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  background: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+}
+
+#Toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: lightgray;
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 10px;
+  flex: auto;
+}
+
+#body {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 50px);
+  width: 100vw;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  height: 100%;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 100%;
+  gap: 20px;
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: 67%;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.gameConsole {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  height: 33%;
+  width: 100%;
+  padding: 10px;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.gameListManager {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.gamePropertiesInput {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  height: 25%;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .gamePropertiesInput {
+    flex-flow: column;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 25%;
+    gap: 0px;
+  }
+}
+
+.fontSizeView {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+}
+
+.fontSizeView label {
+  flex: 0 0 auto;
+}
+
+.fontSizeView input {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.numWordsView {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+}
+
+.numWordsView label {
+  flex: 0 0 auto;
+}
+
+.numWordsView input {
+  flex: 1 1 auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fontSizeView, .numWordsView {
+    width: 100%;
+    flex: 1 1 auto;
+    height: 100%;
+  }
+}
+
+.gameView {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+
+.gameView div {
+  box-sizing: border-box;
+}
+
+.gameIDLabel {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.progressBar {
+  height: 80px;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+}
+
+.textInput,
+.resetButton,
+.gameProgress {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 5px;
+  font-size: 16px;
+  justify-content: center;
+}
+
+.gameConsole input {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  background-color: #d3d3d3;
+  border: 1px solid black;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.gameConsole button {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  background-color: #d3d3d3;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  justify-content: center;
+  padding: 0px;
+}
+
+.gameConsole .resetButton:not(:disabled):hover {
+  background-color: #dadedf;
+}
+
+.invalidMessage {
+  font-size: 5vw;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
