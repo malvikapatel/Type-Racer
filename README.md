@@ -1,1 +1,1 @@
-# Typing-Game
+# Type Racer
